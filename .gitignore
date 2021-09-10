@@ -8,3 +8,8 @@ build
 .project
 bin/
 
+gradlew.bat
+gradlew
+build.gradle
+settings.gradle
+.gitattributes
