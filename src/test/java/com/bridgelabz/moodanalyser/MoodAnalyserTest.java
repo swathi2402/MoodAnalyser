@@ -5,9 +5,9 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 
 public class MoodAnalyserTest {
-	
+
 	@Test
-	public void  givenMessage_WhenSad_ShouldReturnSad() throws Exception {
+	public void givenMessage_WhenSad_ShouldReturnSad() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("This is a sad message");
 
 		String mood = moodAnalyser.analyseMood();
@@ -15,13 +15,13 @@ public class MoodAnalyserTest {
 	}
 
 	@Test
-	public void givenMessage_WhenNotSad_ShouldReturnHappy() throws Exception {
+	public void givenMessage_WhenNotSad_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("This is a happy message");
 
 		String mood = moodAnalyser.analyseMood();
 		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
 	}
-	
+
 	@Test
 	public void givenMessage_WhenNull_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
@@ -32,7 +32,7 @@ public class MoodAnalyserTest {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	@Test
 	public void givenMessage_WhenEmpty_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("");
@@ -43,6 +43,5 @@ public class MoodAnalyserTest {
 			System.out.println(e.getMessage());
 		}
 	}
-
 
 }
