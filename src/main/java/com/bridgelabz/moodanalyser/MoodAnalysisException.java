@@ -1,10 +1,11 @@
 package com.bridgelabz.moodanalyser;
 
-public class MoodAnalysisException extends Exception {
-	
+public class MoodAnalysisException extends RuntimeException {
+
 	enum ExceptionType {
 		ENTERED_NULL, ENTERED_EMPTY
 	}
+
 	ExceptionType type;
 
 	public MoodAnalysisException(ExceptionType type, String message) {
